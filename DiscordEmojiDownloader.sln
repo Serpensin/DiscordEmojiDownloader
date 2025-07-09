@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36221.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscordEmojiDownloader", "DiscordEmojiDownloader.csproj", "{7E55ADCE-5D06-4DB9-A6DB-D80D06A47ECB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug-ManualToken|Any CPU = Debug-ManualToken|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E55ADCE-5D06-4DB9-A6DB-D80D06A47ECB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E55ADCE-5D06-4DB9-A6DB-D80D06A47ECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E55ADCE-5D06-4DB9-A6DB-D80D06A47ECB}.Debug-ManualToken|Any CPU.ActiveCfg = Debug-ManualToken|Any CPU
+		{7E55ADCE-5D06-4DB9-A6DB-D80D06A47ECB}.Debug-ManualToken|Any CPU.Build.0 = Debug-ManualToken|Any CPU
+		{7E55ADCE-5D06-4DB9-A6DB-D80D06A47ECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E55ADCE-5D06-4DB9-A6DB-D80D06A47ECB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C611ED1A-4854-4622-B5DD-77F97633ABB5}
+	EndGlobalSection
+EndGlobal
