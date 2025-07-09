@@ -1,4 +1,4 @@
-# DiscordEmojiDownloader
+﻿# DiscordEmojiDownloader
 
 DiscordEmojiDownloader is a Windows application that allows you to download all emojis and stickers from a Discord server (guild) using your Discord user token. The app provides a simple graphical interface and supports optional compression of the downloaded files.
 
@@ -15,7 +15,79 @@ DiscordEmojiDownloader is a Windows application that allows you to download all 
 - Windows 10 or later
 - .NET 9.0 Desktop Runtime (if not bundled)
 
+## Dependencies
+This project uses a custom C# library for shared internal functionality:  
+👉 [CustomModules-CSharp](https://github.com/Serpensin/CustomModules-CSharp)
+
+## Building from Source
+
+This project is developed using **Visual Studio 2022 or later** and targets **.NET 9.0**. It uses one external custom library:  
+👉 [CustomModules-CSharp](https://github.com/Serpensin/CustomModules-CSharp)
+
+### Prerequisites
+- Windows 10 or later
+- Visual Studio 2022+ with the **.NET 9.0 Desktop Development** workload
+- Optionally: Git
+
+### Steps to Build
+
+1. **Clone this repository**:
+   ```bash
+   git clone https://github.com/Serpensin/DiscordEmojiDownloader.git
+   cd DiscordEmojiDownloader
+   ```
+
+2. **Get the required DLL**
+
+   You have two options:
+   - 🛠 **Build it yourself**: Clone and build [CustomModules-CSharp](https://github.com/Serpensin/CustomModules-CSharp)
+   - 📦 **Download the latest prebuilt DLL** from the [Releases page](https://github.com/Serpensin/CustomModules-CSharp/releases)
+
+   Place the resulting `Serpensin.dll` into the `libs` folder (or wherever it's expected in your project).
+
+3. **Open the solution in Visual Studio**
+
+4. **Publish the application**  
+   You can publish the app in two modes:
+
+   ### 🔹 Option A: Self-contained (default)
+   - Includes the .NET runtime
+   - Can run on systems **without .NET 9.0 installed**
+   - Larger file size (~50–120 MB - Depending if compression is enabled)
+
+   **Steps:**
+   - Right-click the project in Solution Explorer → **Publish**
+   - Target: **Folder**
+   - In **Settings**:
+     - Deployment mode: `Self-contained`
+     - Target runtime: `win-x64`
+     - Check **Produce single file**
+   - Click **Publish**
+
+   Output: a single `.exe` that works standalone on any compatible Windows system.
+
+   ### 🔹 Option B: Framework-dependent
+   - Requires .NET 9.0 Desktop Runtime to be installed on the target system
+   - Much smaller file size (~7MB)
+   - Easier to distribute if .NET is already available
+
+   **Steps:**
+   - Same as above, but in **Settings**:
+     - Deployment mode: `Framework-dependent`
+     - Target runtime: `win-x64`
+     - Check **Produce single file** if desired
+
+   Output: lightweight executable, but **.NET 9.0 must be installed** on the target PC.
+
+   **Summary:**
+
+   | Mode                  | Requires .NET Installed | File Size     | Portable? |
+   |-----------------------|--------------------------|----------------|-----------|
+   | Self-contained        | ❌ No                    | Large (~50–120MB) | ✅ Yes    |
+   | Framework-dependent   | ✅ Yes                   | Small (~7MB)  | ⚠️ Only on systems with .NET 9 |
+
 ## How to Use
+
 1. **Start the application**
    - Double-click the executable or run it from the command line.
 
@@ -38,13 +110,16 @@ DiscordEmojiDownloader is a Windows application that allows you to download all 
    - The files will be saved in the selected folder, organized by server name and type (Emojis/Stickers).
 
 ## Command Line Options
-- `--help` : Show help and exit
-- `--log-level=LEVEL` : Set the log level (Trace, Debug, Info, Warn, Error, Fatal)
+
+- `--help` : Show help and exit  
+- `--log-level=LEVEL` : Set the log level (`Trace`, `Debug`, `Info`, `Warn`, `Error`, `Fatal`)
 
 ## Disclaimer
+
 - This tool requires your Discord user token. **Never share your token with anyone.**
 - Use this tool responsibly and only for servers you have permission to access.
 - This project is not affiliated with Discord.
 
 ## License
-Copyright � 2025 SerpentModding. All rights reserved.
+
+Copyright © 2025 SerpentModding. All rights reserved.
