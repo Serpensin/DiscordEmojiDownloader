@@ -124,7 +124,7 @@ namespace DiscordEmojiDownloader
         {
             Logger.Instance.Info("TokenMenu: Token set and switching to MainMenu.");
             TokenValue = token;
-            UIController.ShowControl("MainMenu", UIController.TransitionDirection.Left, 690, UIController.EasingMode.EaseInOut);
+            UIController.ShowControl("MainMenu", UIController.TransitionDirection.Right, 690, UIController.EasingMode.EaseInOut);
         }
     }
 }
