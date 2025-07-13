@@ -6,4 +6,4 @@
 [assembly: AssemblyCompany("SerpentModding")]
 [assembly: AssemblyCopyright("Copyright © 2025 SerpentModding")]
 [assembly: AssemblyConfiguration("Release")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.1")]

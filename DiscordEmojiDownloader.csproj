@@ -36,6 +36,7 @@
   <ItemGroup>
     <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.7" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="SerpentModding.CustomCSharpModules" Version="1.0.0" />
     <PackageReference Include="SixLabors.ImageSharp" Version="3.1.10" />
     <PackageReference Include="SixLabors.ImageSharp.Drawing" Version="2.1.6" />
   </ItemGroup>
@@ -53,16 +54,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="libs\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="SerpentModding">
-      <HintPath>libs\SerpentModding.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>

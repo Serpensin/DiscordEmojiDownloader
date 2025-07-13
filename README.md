@@ -16,13 +16,11 @@ DiscordEmojiDownloader is a Windows application that allows you to download all 
 - .NET 9.0 Desktop Runtime (if not bundled)
 
 ## Dependencies
-This project uses a custom C# library for shared internal functionality:  
-👉 [CustomModules-CSharp](https://github.com/Serpensin/CustomModules-CSharp)
+This project uses the [SerpentModding.CustomCSharpModules](https://www.nuget.org/packages/SerpentModding.CustomCSharpModules) library, available directly from NuGet.
 
 ## Building from Source
 
-This project is developed using **Visual Studio 2022 or later** and targets **.NET 9.0**. It uses one external custom library:  
-👉 [CustomModules-CSharp](https://github.com/Serpensin/CustomModules-CSharp)
+This project is developed using **Visual Studio 2022 or later** and targets **.NET 9.0**. The required dependency is available via NuGet:
 
 ### Prerequisites
 - Windows 10 or later
@@ -31,19 +29,11 @@ This project is developed using **Visual Studio 2022 or later** and targets **.N
 
 ### Steps to Build
 
-1. **Clone this repository**:
-   ```bash
-   git clone https://github.com/Serpensin/DiscordEmojiDownloader.git
+1. **Clone this repository**:git clone https://github.com/Serpensin/DiscordEmojiDownloader.git
    cd DiscordEmojiDownloader
-   ```
-
-2. **Get the required DLL**
-
-   You have two options:
-   - 🛠 **Build it yourself**: Clone and build [CustomModules-CSharp](https://github.com/Serpensin/CustomModules-CSharp)
-   - 📦 **Download the latest prebuilt DLL** from the [Releases page](https://github.com/Serpensin/CustomModules-CSharp/releases)
-
-   Place the resulting `Serpensin.dll` into the `libs` folder (or wherever it's expected in your project).
+2. **Restore NuGet packages**
+   - Visual Studio will automatically restore the required NuGet package `SerpentModding.CustomCSharpModules` on build.
+   - If not, right-click the solution and select **Restore NuGet Packages**.
 
 3. **Open the solution in Visual Studio**
 
