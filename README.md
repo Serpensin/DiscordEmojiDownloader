@@ -1,4 +1,4 @@
-﻿﻿# DiscordEmojiDownloader
+# DiscordEmojiDownloader
 
 DiscordEmojiDownloader is a Windows application that allows you to download all emojis and stickers from a Discord server (guild) using your Discord user token. The app provides a simple graphical interface and supports optional compression of the downloaded files.
 
